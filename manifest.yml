@@ -1,12 +1,12 @@
 ---
 applications:
-  .:
-    name: gustafer-hello-java
+  - name: gustafer-hello-java
     mem: 128M
     path: target/hello-java-1.0.war
     stackato:
       hooks:
         post-staging:
+          - echo $PWD
           - ls -al
           - mv AppPulseJavaAgent $STACKATO_APP_ROOT/
           - java -jar $STACKATO_APP_ROOT/AppPulseJavaAgent/lib/AppPulseAgent.jar -setup

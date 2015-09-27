@@ -21,9 +21,9 @@
           <configuration>
             <webResources>
               <resource>
-                <directory>/</directory>
+                <directory>.</directory>
                 <includes>
-                  <include>AppPulseJavaAgent/</include>
+                  <include>AppPulseJavaAgent/**</include>
                 </includes>
               </resource>
             </webResources>
