@@ -1,3 +1,11 @@
+#
+# AppPulse artifact ignores
+#
+HPAppPulseJava*.zip
+AppPulseJavaAgent/
+
+# Java + Maven + Eclipse - ignores
+#
 .classpath
 .project
 .settings/

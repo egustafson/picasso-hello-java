@@ -14,4 +14,21 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
+    <build>
+      <plugins>
+        <plugin>
+          <artifactId>maven-war-plugin</artifactId>
+          <configuration>
+            <webResources>
+              <resource>
+                <directory>/</directory>
+                <includes>
+                  <include>AppPulseJavaAgent/</include>
+                </includes>
+              </resource>
+            </webResources>
+          </configuration>
+        </plugin>
+      </plugins>
+    </build>
 </project>
