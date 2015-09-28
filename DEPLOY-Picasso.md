@@ -14,23 +14,23 @@ Overview
 --------
 
 Instrumentation of a Stackato Java application with AppPulse Trace is
-done by taking a specialized bundle (*.zip*), provided when the application is
+done by taking a specialized bundle (`.zip`), provided when the application is
 registered with AppPulse, and adding it to the deployment bundle sent
-to Stackato (*.war*).  The six step process is summarized as follows:
+to Stackato (`.war`).  The six step process is summarized as follows:
 
 1. Log into AppPulse Trace in the appropriate environment.
 2. Register a new application in AppPulse Trace.
-3. Download the agent bundle (*.zip*) provided by AppPulse Trace
+3. Download the agent bundle (`.zip`) provided by AppPulse Trace
    during application registration.
 4. Place the expanded agent bundle (unzipped) in the application's
    project directory.  Ensure the agent files are included in the
-   final WAR during the projects build process.  (*mvn package*)
+   final WAR during the projects build process.  (`mvn package`)
 5. Modify the Stackato deployment descriptor,
    ([*manifest.yml*](https://docs.stackato.com/user/deploy/manifestyml.html
    "manifest.yml")) to configure AppPulse in the application DEA
    ([Droplet Execution Engine](http://docs.stackato.com/admin/reference/architecture.html#droplet-execution-agents
    "DEA")).
-6. Build (*package*) the WAR and push to the Stackato server.
+6. Build (`mvn package`) the WAR and push to the Stackato server.
 
 
 Detailed Instructions
@@ -89,12 +89,11 @@ and a pier of the `META-INF` and `WEB-INF` directories.
     ....
 
 
-### V. Modify the Stackato deployment descriptor to configure AppPulse
-    in the DEA.
+### V. Modify the Stackato deployment descriptor to configure AppPulse in the DEA.
 
 Edit the
-[*manifest.yml*](https://docs.stackato.com/user/deploy/manifestyml.html
-"manifest.yml") file to include the following *post-staging* hooks.
+[`manifest.yml`](https://docs.stackato.com/user/deploy/manifestyml.html
+"manifest.yml") file to include the following `post-staging` hooks.
 This adds and configures the agent inside the application DEA
 ([Droplet Execution Engine](http://docs.stackato.com/admin/reference/architecture.html#droplet-execution-agents
 "DEA")).
@@ -111,7 +110,7 @@ This adds and configures the agent inside the application DEA
 
     > mvn clean package
     > stackato -n push
-    
-Note:  An overview of "General Deployment" using the *stackato*
-command line tool can be found here:
-https://docs.stackato.com/user/deploy/index.html#pushing-application-code 
+
+An overview of "General Deployment" using the `stackato` command line
+tool can be found here:
+https://docs.stackato.com/user/deploy/index.html#pushing-application-code
